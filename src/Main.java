@@ -30,5 +30,13 @@ public class Main {
                 System.out.println(producto.getNombre());
             }
         }
+
+        System.out.println("\nProductos descartables:");
+        for (Producto producto: listaProductos){
+            if (descartable.cumpleFiltro(producto)){
+                System.out.println(producto.getNombre());
+            }
+        }
+
     }
 }
