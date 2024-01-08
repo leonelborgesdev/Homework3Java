@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         List<Producto> listaProductos= new ArrayList<>();
         listaProductos.add(new Producto("Producto1",10.50,"ABC123"));
-        listaProductos.add(new Producto("Producto2", 0, "XYZ789"));
+        listaProductos.add(new Producto("Producto2 Descartable", 5.75, "XYZ789"));
         listaProductos.add(new Producto("Producto3", 15.75, "10"));
 
         Collections.sort(listaProductos);
