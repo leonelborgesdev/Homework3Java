@@ -4,7 +4,7 @@ public class Filtros {
     }
 
     public static Filtrable descartable(){
-        return producto -> producto.getPrecio()>0;
+        return producto -> producto.getPrecio()==0;
     }
 
     public static Filtrable imperecedero() throws Exception{

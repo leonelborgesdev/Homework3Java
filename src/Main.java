@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) {
         List<Producto> listaProductos= new ArrayList<>();
         listaProductos.add(new Producto("Producto1",10.50,"ABC123"));
-        listaProductos.add(new Producto("Producto2", 5.25, "XYZ789"));
-        listaProductos.add(new Producto("Producto3", 15.75, "DEF456"));
+        listaProductos.add(new Producto("Producto2", 0, "XYZ789"));
+        listaProductos.add(new Producto("Producto3", 15.75, "10"));
 
         Collections.sort(listaProductos);
         System.out.println("Productos ordenados por precio:");
@@ -21,6 +21,13 @@ public class Main {
         Filtrable descartable= Filtros.descartable();
         try {
             Filtrable imperecedero = Filtros.imperecedero();
+
+            System.out.println("\nProductos Imperecederos");
+            for (Producto producto: listaProductos){
+                if (imperecedero.cumpleFiltro(producto)){
+                    System.out.println(producto.getNombre());
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
